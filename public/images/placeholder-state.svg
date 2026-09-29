@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <rect width="1200" height="800" fill="#f5f0eb"/>
+  <g opacity="0.4">
+    <rect x="100" y="150" width="1000" height="500" rx="4" fill="#d4cdc4"/>
+    <rect x="550" y="400" width="200" height="120" rx="2" fill="#c4bbb0"/>
+    <circle cx="300" cy="350" r="80" fill="#e0d8ce"/>
+    <circle cx="850" cy="350" r="50" fill="#e0d8ce"/>
+    <line x1="200" y1="520" x2="1000" y2="520" stroke="#d4cdc4" stroke-width="1"/>
+    <rect x="200" y="540" width="60" height="4" rx="2" fill="#c4bbb0"/>
+    <rect x="280" y="540" width="80" height="4" rx="2" fill="#c4bbb0"/>
+  </g>
+  <text x="600" y="420" text-anchor="middle" fill="#8a8078" font-family="Georgia, serif" font-size="20" letter-spacing="2">Interior</text>
+  <text x="600" y="450" text-anchor="middle" fill="#8a8078" font-family="Georgia, serif" font-size="14" letter-spacing="4">LUMEN ATELIER</text>
+</svg>
