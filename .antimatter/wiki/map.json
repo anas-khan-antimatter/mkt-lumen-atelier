@@ -1,23 +1,188 @@
 {
   "root": "/tmp/am-ws/ch_mun9ldm7_1",
   "name": "ch_mun9ldm7_1",
-  "generatedAt": "2026-09-29T22:45:41.339Z",
-  "fileCount": 1,
-  "dirCount": 1,
+  "generatedAt": "2026-09-29T23:22:48.039Z",
+  "fileCount": 44,
+  "dirCount": 12,
   "languages": {
-    "Markdown": 1
+    "Markdown": 8,
+    "JSON": 6,
+    "JavaScript": 2,
+    "TypeScript": 19,
+    "CSS": 1
   },
   "keyFiles": [
-    "README.md"
+    "package.json",
+    "README.md",
+    "tsconfig.json"
   ],
   "directories": [
     {
-      "dir": "(root)",
-      "fileCount": 1,
+      "dir": ".antimatter/wiki",
+      "fileCount": 6,
       "files": [
-        "README.md"
+        "index.md",
+        "log.md",
+        "map.json",
+        "map.md",
+        "overview.md",
+        "schema.md"
       ],
       "symbols": []
+    },
+    {
+      "dir": "(root)",
+      "fileCount": 12,
+      "files": [
+        ".gitignore",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "components.json",
+        "eslint.config.mjs",
+        "next.config.ts",
+        "package-lock.json",
+        "package.json",
+        "postcss.config.mjs",
+        "README.md",
+        "tsconfig.json",
+        "vercel.json"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "public",
+      "fileCount": 5,
+      "files": [
+        "file.svg",
+        "globe.svg",
+        "next.svg",
+        "vercel.svg",
+        "window.svg"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "public/images",
+      "fileCount": 1,
+      "files": [
+        "placeholder-state.svg"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "src/app",
+      "fileCount": 4,
+      "files": [
+        "favicon.ico",
+        "globals.css",
+        "layout.tsx",
+        "page.tsx"
+      ],
+      "symbols": [
+        {
+          "name": "metadata",
+          "kind": "const"
+        }
+      ]
+    },
+    {
+      "dir": "src/app/about",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "src/app/contact",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "src/app/projects",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "src/app/projects/[slug]",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "src/components",
+      "fileCount": 3,
+      "files": [
+        "site-footer.tsx",
+        "site-header.tsx",
+        "theme-provider.tsx"
+      ],
+      "symbols": [
+        {
+          "name": "SiteFooter",
+          "kind": "fn"
+        },
+        {
+          "name": "SiteHeader",
+          "kind": "fn"
+        },
+        {
+          "name": "ThemeProvider",
+          "kind": "fn"
+        }
+      ]
+    },
+    {
+      "dir": "src/components/ui",
+      "fileCount": 7,
+      "files": [
+        "button.tsx",
+        "card.tsx",
+        "dialog.tsx",
+        "input.tsx",
+        "navigation-menu.tsx",
+        "sheet.tsx",
+        "textarea.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "src/lib",
+      "fileCount": 2,
+      "files": [
+        "projects.ts",
+        "utils.ts"
+      ],
+      "symbols": [
+        {
+          "name": "getProjectBySlug",
+          "kind": "fn"
+        },
+        {
+          "name": "getCategoryCounts",
+          "kind": "fn"
+        },
+        {
+          "name": "Project",
+          "kind": "interface"
+        },
+        {
+          "name": "projectsData",
+          "kind": "const"
+        },
+        {
+          "name": "categories",
+          "kind": "const"
+        }
+      ]
     }
   ]
 }
