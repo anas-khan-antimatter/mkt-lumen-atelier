@@ -356,18 +356,15 @@ export default function ProjectDetailPage() {
               Every space has a story waiting to be told. We&apos;d love to hear yours.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button
-                asChild
-                className="h-12 rounded-full bg-background text-foreground hover:bg-background/90 px-8 text-sm tracking-wide uppercase"
+              <Link
+                href="/consult"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-background text-foreground px-8 text-sm font-medium tracking-wide uppercase transition-all hover:bg-background/90"
               >
-                <Link href="/consult">
-                  Book a Consult
-                  <ArrowUpRight className="ml-1.5 h-3.5 w-3.5" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
+                Book a Consult
+                <ArrowUpRight className="ml-1.5 h-3.5 w-3.5" />
+              </Link>
+              <Link
+                href="/moodboard"="outline"
                 className="h-12 rounded-full border-background/20 text-background hover:bg-background hover:text-foreground px-8 text-sm tracking-wide uppercase"
               >
                 <Link href="/projects">
