@@ -4,6 +4,9 @@ import { useParams } from "next/navigation"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowLeft, ArrowUpRight, MapPin, Calendar, Palette, Columns2, Check } from "lucide-react"
+import { getProjectBySlug } from "@/lib/projects"
+import { notFound } from "next/navigation"
+import { useState } from "react"
 
 function MaterialPalette({
   palette,
