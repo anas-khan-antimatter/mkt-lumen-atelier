@@ -183,7 +183,7 @@ export default function ProcessPage() {
                   delay: Math.min(ci * 0.08, 0.3),
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                onViewEnter={() => {
+                onViewportEnter={() => {
                   setActiveChapter(ch.id)
                   setScrolledTo(ch.id)
                 }}
