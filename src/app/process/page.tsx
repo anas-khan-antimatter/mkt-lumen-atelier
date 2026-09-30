@@ -1,8 +1,8 @@
 "use client"
 
-import { motion, useScroll, useTransform } from "framer-motion"
-import { ChevronRight, ArrowUpRight, CheckCircle, Clock, PencilRuler, Paintbrush, Sofa, Ruler } from "lucide-react"
-import { useRef } from "react"
+import { useState, useRef, useEffect } from "react"
+import { motion } from "framer-motion"
+import { ArrowUpRight, CheckCircle, Clock, PencilRuler, Paintbrush, Sofa, Ruler } from "lucide-react"
 import Link from "next/link"
 
 const processSteps = [
@@ -95,62 +95,22 @@ const processSteps = [
 
 const processNav = processSteps.map((s) => ({ id: s.id, title: s.title }))
 
-function StickyChapterNav({ activeId }: { activeId: string }) {
-  return (
-    <nav className="fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-3 px-4">
-      {processNav.map((chapter) => (
-        <a
-          key={chapter.id}
-          href={`#${chapter.id}`}
-          className={`flex items-center gap-2 transition-all duration-300 ${
-            activeId === chapter.id
-              ? "text-foreground"
-              : "text-foreground/30 hover:text-foreground/60"
-          }`}
-        >
-          <span
-            className={`h-2 w-2 rounded-full transition-all duration-300 ${
-              activeId === chapter.id
-                ? "bg-foreground scale-125"
-                : "bg-foreground/20 scale-75"
-            }`}
-          />
-          <span className="text-[10px] uppercase tracking-widest font-medium">
-            {chapter.title}
-          </span>
-        </a>
-      ))}
-    </nav>
-  )
-}
-
 function getIcon(iconName: string) {
   switch (iconName) {
-    case "PencilRuler":
-      return PencilRuler
-    case "Paintbrush":
-      return Paintbrush
-    case "Ruler":
-      return Ruler
-    case "Sofa":
-      return Sofa
-    case "CheckCircle":
-      return CheckCircle
-    default:
-      return Clock
+    case "PencilRuler": return PencilRuler
+    case "Paintbrush":  return Paintbrush
+    case "Ruler":       return Ruler
+    case "Sofa":        return Sofa
+    case "CheckCircle": return CheckCircle
+    default:            return Clock
   }
 }
 
 export default function ProcessPage() {
   const [activeChapter, setActiveChapter] = useState("discovery")
 
-  // Track active chapter via scroll
-  const sectionRefs = processSteps.map(() => useRef<HTMLDivElement>(null))
-  const { scrollYProgress: _s } = useScroll({ target: useRef<HTMLDivElement>(null) }) // dummy
-
-  // Simple scroll tracking with IntersectionObserver
   useEffect(() => {
-    const observers = processSteps.map((step, i) => {
+    const observers = processSteps.map((step) => {
       const el = document.getElementById(step.id)
       if (!el) return null
       const observer = new IntersectionObserver(
@@ -233,7 +193,30 @@ export default function ProcessPage() {
       </section>
 
       {/* Sticky side nav */}
-      <StickyChapterNav activeId={activeChapter} />
+      <nav className="fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-3 px-4">
+        {processNav.map((chapter) => (
+          <a
+            key={chapter.id}
+            href={`#${chapter.id}`}
+            className={`flex items-center gap-2 transition-all duration-300 ${
+              activeChapter === chapter.id
+                ? "text-foreground"
+                : "text-foreground/30 hover:text-foreground/60"
+            }`}
+          >
+            <span
+              className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                activeChapter === chapter.id
+                  ? "bg-foreground scale-125"
+                  : "bg-foreground/20 scale-75"
+              }`}
+            />
+            <span className="text-[10px] uppercase tracking-widest font-medium">
+              {chapter.title}
+            </span>
+          </a>
+        ))}
+      </nav>
 
       {/* Detailed steps */}
       {processSteps.map((step, i) => {
@@ -242,7 +225,6 @@ export default function ProcessPage() {
           <section
             key={step.id}
             id={step.id}
-            ref={sectionRefs[i]}
             className={`py-24 lg:py-32 px-6 lg:px-8 ${
               i % 2 === 0 ? "bg-background" : "bg-muted/20"
             }`}
