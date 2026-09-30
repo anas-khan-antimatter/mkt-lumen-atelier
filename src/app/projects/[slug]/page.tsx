@@ -4,10 +4,6 @@ import { useParams } from "next/navigation"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowLeft, ArrowUpRight, MapPin, Calendar, Palette, Columns2, Check } from "lucide-react"
-import { getProjectBySlug } from "@/lib/projects"
-import { notFound } from "next/navigation"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
 
 function MaterialPalette({
   palette,
@@ -364,13 +360,11 @@ export default function ProjectDetailPage() {
                 <ArrowUpRight className="ml-1.5 h-3.5 w-3.5" />
               </Link>
               <Link
-                href="/moodboard"="outline"
-                className="h-12 rounded-full border-background/20 text-background hover:bg-background hover:text-foreground px-8 text-sm tracking-wide uppercase"
+                href="/moodboard"
+                className="inline-flex h-12 items-center justify-center rounded-full border-2 border-background/20 text-background px-8 text-sm font-medium tracking-wide uppercase transition-all hover:bg-background hover:text-foreground"
               >
-                <Link href="/projects">
-                  All Projects
-                </Link>
-              </Button>
+                Build a Moodboard
+              </Link>
             </div>
           </motion.div>
         </div>
