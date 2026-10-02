@@ -1,9 +1,9 @@
 # Workspace Map — c-1790732950026-oibi3
-_Generated 2026-09-30 · 44 files · 12 directories_  
+_Generated 2026-10-02 · 48 files · 16 directories_  
 _Deterministic structural map. Regenerate with the `map` tool or "Antimatter: Map Workspace". Do not hand-edit._
 
 ## Languages
-- TypeScript: 19
+- TypeScript: 23
 - Markdown: 8
 - JSON: 6
 - JavaScript: 2
@@ -34,7 +34,20 @@ _Deterministic structural map. Regenerate with the `map` tool or "Antimatter: Ma
 ### `src/app/about` — 1 file
 - files: page.tsx
 
+### `src/app/api/consult` — 1 file
+- symbols: POST (fn), GET (fn)
+- files: route.ts
+
+### `src/app/consult` — 1 file
+- files: page.tsx
+
 ### `src/app/contact` — 1 file
+- files: page.tsx
+
+### `src/app/moodboard` — 1 file
+- files: page.tsx
+
+### `src/app/process` — 1 file
 - files: page.tsx
 
 ### `src/app/projects` — 1 file
@@ -51,5 +64,5 @@ _Deterministic structural map. Regenerate with the `map` tool or "Antimatter: Ma
 - files: button.tsx, card.tsx, dialog.tsx, input.tsx, navigation-menu.tsx, sheet.tsx, textarea.tsx
 
 ### `src/lib` — 2 files
-- symbols: getProjectBySlug (fn), getCategoryCounts (fn), Project (interface), projectsData (const), categories (const)
+- symbols: getProjectBySlug (fn), getProjectsByCategory (fn), getProjectsByBorough (fn), getFilteredProjects (fn), MaterialSwatch (interface), BeforeAfter (interface), Project (interface), projectsData (const), categories (const), boroughs (const)
 - files: projects.ts, utils.ts

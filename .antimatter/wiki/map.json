@@ -1,14 +1,14 @@
 {
   "root": "/tmp/am-ws/c-1790732950026-oibi3",
   "name": "c-1790732950026-oibi3",
-  "generatedAt": "2026-09-30T17:39:50.454Z",
-  "fileCount": 44,
-  "dirCount": 12,
+  "generatedAt": "2026-10-02T22:06:54.248Z",
+  "fileCount": 48,
+  "dirCount": 16,
   "languages": {
     "Markdown": 8,
     "JSON": 6,
     "JavaScript": 2,
-    "TypeScript": 19,
+    "TypeScript": 23,
     "CSS": 1
   },
   "keyFiles": [
@@ -94,7 +94,48 @@
       "symbols": []
     },
     {
+      "dir": "src/app/api/consult",
+      "fileCount": 1,
+      "files": [
+        "route.ts"
+      ],
+      "symbols": [
+        {
+          "name": "POST",
+          "kind": "fn"
+        },
+        {
+          "name": "GET",
+          "kind": "fn"
+        }
+      ]
+    },
+    {
+      "dir": "src/app/consult",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
       "dir": "src/app/contact",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "src/app/moodboard",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "src/app/process",
       "fileCount": 1,
       "files": [
         "page.tsx"
@@ -167,8 +208,24 @@
           "kind": "fn"
         },
         {
-          "name": "getCategoryCounts",
+          "name": "getProjectsByCategory",
           "kind": "fn"
+        },
+        {
+          "name": "getProjectsByBorough",
+          "kind": "fn"
+        },
+        {
+          "name": "getFilteredProjects",
+          "kind": "fn"
+        },
+        {
+          "name": "MaterialSwatch",
+          "kind": "interface"
+        },
+        {
+          "name": "BeforeAfter",
+          "kind": "interface"
         },
         {
           "name": "Project",
@@ -180,6 +237,10 @@
         },
         {
           "name": "categories",
+          "kind": "const"
+        },
+        {
+          "name": "boroughs",
           "kind": "const"
         }
       ]
